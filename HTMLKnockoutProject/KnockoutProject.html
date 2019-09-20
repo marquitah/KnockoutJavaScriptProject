@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <script type='text/javascript' src='knockout-3.5.0.js'></script>
     <title>Movie Voting Website</title>
 </head>
 
@@ -13,19 +14,19 @@
     <div class="row">
         <div class="col-md-4">
             <h2>The Peanut Butter Falcon</h2>
-            <img src="Images/pbfalconsmallimage.jpg" />
+            <img src="pbfalconsmallimage.jpg" />
             <p>An adventure begins when Zak, a young man with Down syndrome, runs away from the nursing home where he lives to chase his dream of becoming a professional wrestler.</p>
         </div>
 
         <div class="col-md-4">
             <h2>Kill Bill: Volume 1</h2>
-            <img src="Images/killbill.jpg" />
+            <img src="killbill.jpg" />
             <p>Uma Thurman as the Bride, a former member of the Deadly Viper Assassination Squad, seeks revenge on the Deadly Vipers after they try to kill her and her unborn child in a wedding chapel.</p>
         </div>
 
         <div class="col-md-4">
             <h2>Happy Gilmore</h2>
-            <img src="Images/happygilmore.jpg" />
+            <img src="happygilmore.jpg" />
             <p>An unsuccessful ice hockey player discovers a newfound talent for golf.</p>
         </div>
     </div>
@@ -33,16 +34,17 @@
         <p>Please type your choice then press Tab: <input data-bind="value: movieTitle" /></p>
     </div>
     <div>
-        <p>Yes, <strong data-bind="value: movieTitle"></strong> is a great movie.</p>
+        <p>Yes, <strong data-bind="text: movieTitle"></strong> is a great movie.</p>
         <script>
-            function ViewModel() {
-            this.movieTitle = ko.observable();
-        }
+                function ViewModel() {
+                this.movieTitle = ko.observable();
+            }
 
-            ko.applyBindings(new ViewModel());
+                ko.applyBindings(new ViewModel());
         </script>
     </div>
 
     
 <body>
+    
 </html>
